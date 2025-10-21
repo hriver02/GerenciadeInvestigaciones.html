@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerencia de Investigaciones - CANTV</title>
+    <title>Gerencia General de Seguridad Integral - CANTV</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -14,16 +14,27 @@
             line-height: 1.6;
         }
         header {
-            background-color: #0a2342; /* Azul oscuro */
+            background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Encabezado.png?raw=true'); /* Nueva imagen de encabezado */
+            background-size: 100% 100%; /* La imagen se estira para encuadrar el header */
+            background-position: center; /* Centra la imagen de fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
             color: #ffffff;
-            padding: 1rem 0;
+            padding: 0;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */ /* Eliminado el box-shadow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 250px; /* Altura mínima ajustada a 250px */
+            position: relative;
         }
+
         nav {
             background-color: #1a3a5e; /* Azul un poco más claro */
             padding: 0.5rem 0;
             text-align: center;
+            position: relative;
+            z-index: 10;
         }
         nav a {
             color: #ffffff;
@@ -97,34 +108,73 @@
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
+        .news-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .news-item h3 {
+            text-align: left;
+            color: #1a3a5e;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .news-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .news-item .date {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
         footer {
-            background-color: #0a2342;
+            background-color: #0a2342; /* Color de fondo de respaldo si la imagen no carga */
             color: #ffffff;
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 0; /* Eliminado padding para que la imagen ocupe todo */
             margin-top: 2rem;
             font-size: 0.9rem;
+            background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Membrete5.png?raw=true'); /* Membrete5 como fondo del footer */
+            background-size: 100% 100%; /* La imagen se estira para encuadrar el footer */
+            background-position: center; /* Centra la imagen de fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            min-height: 143px; /* Altura mínima ajustada a la altura de la imagen Membrete5.png */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        footer p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            color: inherit; /* Asegura que el color del texto sea el definido en footer */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Gerencia de Investigaciones</h1>
-        <p>CANTV</p>
+        <!-- El encabezado ahora es una única imagen de fondo -->
+        <!-- No hay elementos de texto o logos individuales en el HTML del header -->
     </header>
 
     <nav>
         <a href="#inicio">Inicio</a>
         <a href="#mision-vision">Misión y Visión</a>
         <a href="#servicios">Servicios</a>
+        <a href="#noticias">Noticias y Novedades</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
     <div class="container">
         <section id="inicio">
             <h2>Bienvenido</h2>
-            <p style="text-align: center;">La Gerencia de Investigaciones de CANTV se enfoca en la búsqueda de la verdad y la protección de los intereses de la empresa, a través de la investigación exhaustiva de hechos y situaciones que puedan afectar nuestra integridad y operaciones.</p>
-            <p style="text-align: center;">Utilizamos metodologías avanzadas y un equipo especializado para garantizar procesos justos, transparentes y efectivos.</p>
+            <p style="text-align: center;">En la Gerencia General de Seguridad Integral de CANTV, nos dedicamos a proteger los activos críticos de la empresa, garantizando la continuidad operativa y la confianza de nuestros usuarios. Nuestra estrategia se basa en la prevención, detección y respuesta eficiente ante cualquier amenaza.</p>
+            <p style="text-align: center;">Trabajamos con tecnología de vanguardia y un equipo altamente capacitado para ofrecer un entorno seguro y confiable para todos.</p>
         </section>
 
         <section id="mision-vision">
@@ -132,11 +182,11 @@
             <div class="mission-vision-grid">
                 <div>
                     <h3>Nuestra Misión</h3>
-                    <p>Realizar investigaciones objetivas y rigurosas sobre incidentes, irregularidades o cualquier situación que comprometa la seguridad, ética o patrimonio de CANTV, proporcionando información veraz y oportuna para la toma de decisiones y la aplicación de medidas correctivas y preventivas.</p>
+                    <p>Garantizar la protección integral de la infraestructura, información, personal y operaciones de CANTV, mediante la implementación de políticas, procedimientos y tecnologías de seguridad avanzadas, asegurando la continuidad del servicio y la confianza de nuestros usuarios y colaboradores.</p>
                 </div>
                 <div>
                     <h3>Nuestra Visión</h3>
-                    <p>Ser un pilar fundamental en la salvaguarda de la integridad de CANTV, reconocidos por nuestra eficiencia, profesionalismo y compromiso con la justicia, contribuyendo a mantener un ambiente de confianza y transparencia en todas las operaciones de la empresa.</p>
+                    <p>Ser el referente de excelencia en seguridad integral dentro del sector de las telecomunicaciones, innovando constantemente en la gestión de riesgos y la protección de activos, para consolidar a CANTV como una empresa líder, resiliente y confiable en Venezuela.</p>
                 </div>
             </div>
         </section>
@@ -145,35 +195,55 @@
             <h2>Nuestros Servicios</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Investigación de Fraudes</h3>
-                    <p>Análisis y seguimiento de casos de fraude interno y externo, incluyendo uso indebido de recursos, estafas y otras actividades ilícitas.</p>
+                    <h3>Seguridad Física</h3>
+                    <p>Protección de instalaciones, equipos y personal mediante sistemas de vigilancia, control de acceso y protocolos de respuesta ante emergencias.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Análisis Forense Digital</h3>
-                    <p>Recolección, preservación y análisis de evidencia digital en dispositivos y redes para apoyar investigaciones internas y externas.</p>
+                    <h3>Ciberseguridad</h3>
+                    <p>Defensa contra amenazas digitales, protección de datos, prevención de intrusiones y gestión de incidentes de seguridad informática.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Investigación de Incidentes</h3>
-                    <p>Determinación de las causas raíz y responsables de incidentes de seguridad, operativos o de cumplimiento, para prevenir futuras ocurrencias.</p>
+                    <h3>Gestión de Riesgos</h3>
+                    <p>Identificación, evaluación y mitigación de riesgos operativos y estratégicos que puedan afectar la seguridad y continuidad del negocio.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Diligencia Debida (Due Diligence)</h3>
-                    <p>Evaluación de antecedentes y riesgos asociados a proveedores, socios o personal clave, para proteger los intereses de la empresa.</p>
+                    <h3>Continuidad del Negocio</h3>
+                    <p>Desarrollo e implementación de planes para asegurar la operación ininterrumpida de los servicios críticos ante cualquier eventualidad.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Asesoría en Cumplimiento</h3>
-                    <p>Orientación y apoyo en la implementación de normativas y políticas internas para asegurar la adherencia a estándares éticos y legales.</p>
+                    <h3>Concientización y Capacitación</h3>
+                    <p>Programas de formación para el personal en mejores prácticas de seguridad, promoviendo una cultura de prevención y responsabilidad.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Reporte y Análisis de Inteligencia</h3>
-                    <p>Generación de informes detallados y análisis de tendencias para identificar patrones y anticipar posibles amenazas o riesgos.</p>
+                    <h3>Auditorías de Seguridad</h3>
+                    <p>Evaluación periódica de sistemas y procesos para identificar vulnerabilidades y asegurar el cumplimiento de normativas.</p>
                 </div>
             </div>
         </section>
 
+        <section id="noticias">
+            <h2>Noticias y Novedades</h2>
+            <div class="news-item">
+                <span class="date">15 de Noviembre de 2023</span>
+                <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
+                <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
+            </div>
+            <div class="news-item">
+                <span class="date">01 de Noviembre de 2023</span>
+                <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
+                <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
+            </div>
+            <div class="news-item">
+                <span class="date">20 de Octubre de 2023</span>
+                <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
+                <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
+            </div>
+            <!-- Puedes añadir más noticias aquí -->
+        </section>
+
         <section id="contacto">
             <h2>Contacto</h2>
-            <p style="text-align: center;">Para reportar un incidente o solicitar una investigación, por favor utilice los canales internos designados de CANTV.</p>
+            <p style="text-align: center;">Para más información o consultas, por favor contáctenos a través de los canales internos de CANTV.</p>
             <!-- Aquí se podría añadir un formulario de contacto o detalles específicos si se desea -->
         </section>
     </div>
