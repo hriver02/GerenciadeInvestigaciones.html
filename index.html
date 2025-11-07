@@ -208,6 +208,12 @@
         button:hover {
             background-color: #0056b3;
         }
+        #reporte-numero {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: bold;
+            color: #007bff;
+        }
         /* Mejoras para responsividad */
         @media (max-width: 768px) {
             header {
@@ -391,5 +397,20 @@
     <footer>
         <p>&copy; 2023 CANTV. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Script para manejar el formulario y generar número de reporte correlativo
+        let reportCounter = localStorage.getItem('reportCounter') ? parseInt(localStorage.getItem('reportCounter')) : 0;
+
+        document.getElementById('denuncia-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            reportCounter++;
+            localStorage.setItem('reportCounter', reportCounter);
+            const reportNumber = 'REP-' + reportCounter.toString().padStart(6, '0');
+            alert('Denuncia enviada con éxito. Número de reporte: ' + reportNumber);
+            // Aquí podrías agregar código para enviar el formulario a un servidor si es necesario
+            this.reset(); // Reinicia el formulario
+        });
+    </script>
 </body>
 </html>
