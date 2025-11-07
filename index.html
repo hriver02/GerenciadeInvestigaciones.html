@@ -156,6 +156,11 @@
         .news-item a:hover {
             text-decoration: underline;
         }
+        .news-item iframe {
+            width: 100%;
+            height: 150px; /* Altura para reels */
+            border: none;
+        }
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-50% - 1rem)); }
@@ -174,45 +179,6 @@
             height: auto;
             display: block;
             object-fit: cover;
-        }
-        /* Formulario de denuncias */
-        #denuncia-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #reporte-numero {
-            margin-top: 1rem;
-            text-align: center;
-            font-weight: bold;
-            color: #007bff;
         }
         /* Mejoras para responsividad */
         @media (max-width: 768px) {
@@ -344,23 +310,121 @@
 
         <section id="noticias">
             <h2>Noticias y Novedades</h2>
-            <div class="news-item">
-                <span class="date">15 de Noviembre de 2023</span>
-                <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
-                <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
-            </div>
-            <div class="news-item">
-                <span class="date">01 de Noviembre de 2023</span>
-                <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
-                <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
-            </div>
-            <div class="news-item">
-                <span class="date">20 de Octubre de 2023</span>
-                <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
-                <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
+            <div class="news-carousel">
+                <div class="news-track">
+                    <!-- Contenido duplicado para loop seamless -->
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DQdMFxTDt1R/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">15 de Noviembre de 2023</span>
+                        <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
+                        <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DQrl-oPAmBw/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">01 de Noviembre de 2023</span>
+                        <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
+                        <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DO3lAjijttr/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">20 de Octubre de 2023</span>
+                        <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
+                        <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DPwfcbWiSP-/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">21 de octubre de 2025</span>
+                        <h3>Barcos, aviones y marines: así es el despliegue militar de Estados Unidos frente a Venezuela</h3>
+                        <p>Una fuerza militar estadounidense sin precedentes se ha desplegado en el mar Caribe y frente a la costa de Venezuela, como parte de una ofensiva ...</p>
+                        <a href="https://www.infobae.com/estados-unidos/2025/10/21/barcos-aviones-y-marines-asi-es-el-despliegue-militar-de-estados-unidos-frente-a-venezuela/" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.youtube.com/embed/mZ6OLhhLirg" width="250" height="150" frameborder="0" allowfullscreen></iframe>
+                        <span class="date">17 de octubre de 2025</span>
+                        <h3>Se reaviva tensión entre Venezuela y EEUU</h3>
+                        <p>Se reaviva tensión entre Venezuela y EEUU | Edición Digital 17 de octubre de 2025</p>
+                        <a href="https://www.youtube.com/watch?v=mZ6OLhhLirg" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.youtube.com/embed/eMcNY603cNk" width="250" height="150" frameborder="0" allowfullscreen></iframe>
+                        <span class="date">21 de octubre de 2025</span>
+                        <h3>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz</h3>
+                        <p>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta -a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/</p>
+                        <a href="https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta-a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3734637695248494578" alt="Reajuste de tarifas Digitel octubre 2025">
+                        <span class="date">2025</span>
+                        <h3>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025</h3>
+                        <p>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025. Marcado para el 01/10/2025 Plan Inteligente Plus 6GB/6.24$ ✳️Bs. 782, ...</p>
+                        <a href="https://www.facebook.com/photo.php?fbid=1016190467196346&id=100064162056749&set=a.455089829973082" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://averiastelefonicas.cantv.com.ve/views/Infografia-Aba-2.jpg" alt="Servicio de reporte de avería Cantv">
+                        <span class="date">2025</span>
+                        <h3>Servicio de reporte de avería - Cantv | Averias en línea</h3>
+                        <p>Servicio de reporte de avería. Martes, 21 de octubre de 2025 07:36 pm. CANTV. Reporte de avería de telefonía · Reporte de avería de internet · Reporte de avería ...</p>
+                        <a href="https://averiastelefonicas.cantv.com.ve/views/reporte/infografia" target="_blank">Fuente</a>
+                    </div>
+                    <!-- Duplicar el contenido para loop -->
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DQdMFxTDt1R/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">15 de Noviembre de 2023</span>
+                        <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
+                        <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DQrl-oPAmBw/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">01 de Noviembre de 2023</span>
+                        <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
+                        <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DO3lAjijttr/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">20 de Octubre de 2023</span>
+                        <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
+                        <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.instagram.com/reel/DPwfcbWiSP-/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        <span class="date">21 de octubre de 2025</span>
+                        <h3>Barcos, aviones y marines: así es el despliegue militar de Estados Unidos frente a Venezuela</h3>
+                        <p>Una fuerza militar estadounidense sin precedentes se ha desplegado en el mar Caribe y frente a la costa de Venezuela, como parte de una ofensiva ...</p>
+                        <a href="https://www.infobae.com/estados-unidos/2025/10/21/barcos-aviones-y-marines-asi-es-el-despliegue-militar-de-estados-unidos-frente-a-venezuela/" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.youtube.com/embed/mZ6OLhhLirg" width="250" height="150" frameborder="0" allowfullscreen></iframe>
+                        <span class="date">17 de octubre de 2025</span>
+                        <h3>Se reaviva tensión entre Venezuela y EEUU</h3>
+                        <p>Se reaviva tensión entre Venezuela y EEUU | Edición Digital 17 de octubre de 2025</p>
+                        <a href="https://www.youtube.com/watch?v=mZ6OLhhLirg" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <iframe src="https://www.youtube.com/embed/eMcNY603cNk" width="250" height="150" frameborder="0" allowfullscreen></iframe>
+                        <span class="date">21 de octubre de 2025</span>
+                        <h3>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz</h3>
+                        <p>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta -a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/</p>
+                        <a href="https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta-a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3734637695248494578" alt="Reajuste de tarifas Digitel octubre 2025">
+                        <span class="date">2025</span>
+                        <h3>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025</h3>
+                        <p>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025. Marcado para el 01/10/2025 Plan Inteligente Plus 6GB/6.24$ ✳️Bs. 782, ...</p>
+                        <a href="https://www.facebook.com/photo.php?fbid=1016190467196346&id=100064162056749&set=a.455089829973082" target="_blank">Fuente</a>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://averiastelefonicas.cantv.com.ve/views/Infografia-Aba-2.jpg" alt="Servicio de reporte de avería Cantv">
+                        <span class="date">2025</span>
+                        <h3>Servicio de reporte de avería - Cantv | Averias en línea</h3>
+                        <p>Servicio de reporte de avería. Martes, 21 de octubre de 2025 07:36 pm. CANTV. Reporte de avería de telefonía · Reporte de avería de internet · Reporte de avería ...</p>
+                        <a href="https://averiastelefonicas.cantv.com.ve/views/reporte/infografia" target="_blank">Fuente</a>
+                    </div>
+                </div>
             </div>
             <!-- Puedes añadir más noticias aquí -->
         </section>
+
         <section id="contacto">
             <h2>Contacto y Denuncias</h2>
             <p style="text-align: center;">Para reportar fraudes o ilícitos dentro de la empresa, utilice el siguiente formulario. Las denuncias pueden ser anónimas.</p>
