@@ -1,6 +1,3 @@
-Aquí tienes tu página web **ya completamente actualizada** con la asistente virtual **Ginv** (usando la foto que enviaste), con interacción por **voz y chat**, diseño elegante que combina perfectamente con los colores corporativos de CANTV, y respuestas inteligentes relacionadas con seguridad integral.
-
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -62,7 +59,85 @@ Aquí tienes tu página web **ya completamente actualizada** con la asistente vi
             margin-left: auto;
             margin-right: auto;
         }
-        /* ====================== ASISTENTE GINV ====================== */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .service-card {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #1a3a5e;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .news-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .news-item h3 {
+            text-align: left;
+            color: #1a3a5e;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .news-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .news-item .date {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        footer {
+            background-color: #0a2342;
+            color: #ffffff;
+            text-align: center;
+            padding: 0;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Membrete5.png?raw=true');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 143px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        footer p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        /* ====================== ASISTENTE GINV (MEJORADO) ====================== */
         #ginv-btn {
             position: fixed;
             bottom: 20px;
@@ -153,14 +228,21 @@ Aquí tienes tu página web **ya completamente actualizada** con la asistente vi
         @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(255,68,68,0.7);} 70%{box-shadow:0 0 0 10px rgba(255,68,68,0);} 100%{box-shadow:0 0 0 0 rgba(255,68,68,0);} }
 
         /* Responsive */
+        @media (max-width: 768px) {
+            header { min-height: auto; padding: 1.5rem 0; }
+            nav a { padding: 0.8rem 1.2rem; font-size: 0.95rem; }
+            .services-grid, .mission-vision-grid { grid-template-columns: 1fr; }
+            #ginv-chat { width: 95vw; height: 70vh; bottom: 90px; right: 10px; }
+        }
         @media (max-width: 480px) {
-            #ginv-chat { width: 95vw; height: 70vh; bottom: 90px; }
+            nav a { padding: 0.7rem 1rem; font-size: 0.9rem; display: block; }
+        }
+        @media (min-width: 768px) {
+            .mission-vision-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-
-    <!-- TU CONTENIDO ORIGINAL (sin cambios) -->
     <header></header>
     <nav>
         <a href="#inicio">Inicio</a>
@@ -170,8 +252,57 @@ Aquí tienes tu página web **ya completamente actualizada** con la asistente vi
         <a href="#contacto">Contacto</a>
     </nav>
     <div class="container">
-        <section id="inicio">… (todo tu contenido original permanece igual) …</section>
-        <!-- ... resto de secciones ... -->
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p style="text-align: center;">En la Gerencia General de Seguridad Integral de CANTV, nos dedicamos a proteger los activos críticos de la empresa, garantizando la continuidad operativa y la confianza de nuestros usuarios. Nuestra estrategia se basa en la prevención, detección y respuesta eficiente ante cualquier amenaza.</p>
+            <p style="text-align: center;">Trabajamos con tecnología de vanguardia y un equipo altamente capacitado para ofrecer un entorno seguro y confiable para todos.</p>
+        </section>
+        <section id="mision-vision">
+            <h2>Misión y Visión</h2>
+            <div class="mission-vision-grid">
+                <div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Garantizar la protección integral de la infraestructura, información, personal y operaciones de CANTV, mediante la implementación de políticas, procedimientos y tecnologías de seguridad avanzadas, asegurando la continuidad del servicio y la confianza de nuestros usuarios y colaboradores.</p>
+                </div>
+                <div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser el referente de excelencia en seguridad integral dentro del sector de las telecomunicaciones, innovando constantemente en la gestión de riesgos y la protección de activos, para consolidar a CANTV como una empresa líder, resiliente y confiable en Venezuela.</p>
+                </div>
+            </div>
+        </section>
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card"><h3>Seguridad Física</h3><p>Protección de instalaciones, equipos y personal mediante sistemas de vigilancia, control de acceso y protocolos de respuesta ante emergencias.</p></div>
+                <div class="service-card"><h3>Ciberseguridad</h3><p>Defensa contra amenazas digitales, protección de datos, prevención de intrusiones y gestión de incidentes de seguridad informática.</p></div>
+                <div class="service-card"><h3>Gestión de Riesgos</h3><p>Identificación, evaluación y mitigación de riesgos operativos y estratégicos que puedan afectar la seguridad y continuidad del negocio.</p></div>
+                <div class="service-card"><h3>Continuidad del Negocio</h3><p>Desarrollo e implementación de planes para asegurar la operación ininterrumpida de los servicios críticos ante cualquier eventualidad.</p></div>
+                <div class="service-card"><h3>Concientización y Capacitación</h3><p>Programas de formación para el personal en mejores prácticas de seguridad, promoviendo una cultura de prevención y responsabilidad.</p></div>
+                <div class="service-card"><h3>Auditorías de Seguridad</h3><p>Evaluación periódica de sistemas y procesos para identificar vulnerabilidades y asegurar el cumplimiento de normativas.</p></div>
+            </div>
+        </section>
+        <section id="noticias">
+            <h2>Noticias y Novedades</h2>
+            <div class="news-item">
+                <span class="date">15 de Noviembre de 2023</span>
+                <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
+                <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
+            </div>
+            <div class="news-item">
+                <span class="date">01 de Noviembre de 2023</span>
+                <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
+                <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
+            </div>
+            <div class="news-item">
+                <span class="date">20 de Octubre de 2023</span>
+                <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
+                <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p style="text-align: center;">Para reportar incidentes de seguridad, denuncias anónimas o consultas, utiliza los canales internos de CANTV o escríbenos directamente a través del asistente virtual.</p>
+        </section>
     </div>
     <footer>
         <p>© 2023 CANTV. Todos los derechos reservados.</p>
@@ -179,18 +310,18 @@ Aquí tienes tu página web **ya completamente actualizada** con la asistente vi
 
     <!-- ====================== ASISTENTE GINV ====================== -->
     <div id="ginv-btn">
-        <img src="https://i.imgur.com/2k2iX8J.png" alt="Ginv - Asistente Virtual">
+        <img src="ginv-avatar.jpg" alt="Ginv - Asistente Virtual" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA3MCA3MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzUiIGN5PSIzNSIgcj0iMzUiIGZpbGw9IiMwYTIzNDIiLz4KPHRleHQgeD0iMzUiIHk9IjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HSU5WKzwvdGV4dD4KPC9zdmc+';"> <!-- Placeholder si la imagen falla -->
     </div>
 
     <div id="ginv-chat">
-        <div id="ginv-header">Ginv – Asistente de Seguridad Integral</div>
+        <div id="ginv-header">🛡️ Ginv – Asistente de Seguridad Integral</div>
         <div id="ginv-messages">
-            <div class="msg ginv">¡Hola! Soy <strong>Ginv</strong>, tu asistente virtual de Seguridad Integral CANTV. Puedes hablarme o escribirme 😊<br><br>¿En qué te ayudo hoy?</div>
+            <div class="msg ginv">¡Hola! Soy <strong>Ginv</strong>, tu asistente virtual de la Gerencia de Seguridad Integral de CANTV. Puedes escribirme o hablarme por voz. 😊<br><br>Prueba preguntando sobre "misión", "servicios" o "denuncia".</div>
         </div>
         <div id="ginv-input-area">
-            <input type="text" id="ginv-input" placeholder="Escribe tu mensaje..." autocomplete="off">
-            <button id="ginv-mic">🎤</button>
-            <button id="ginv-send">➤</button>
+            <input type="text" id="ginv-input" placeholder="Escribe tu mensaje o habla..." autocomplete="off">
+            <button id="ginv-mic" title="Hablar con Ginv">🎤</button>
+            <button id="ginv-send" title="Enviar">➤</button>
         </div>
     </div>
 
@@ -202,12 +333,16 @@ Aquí tienes tu página web **ya completamente actualizada** con la asistente vi
         const sendBtn = document.getElementById('ginv-send');
         const micBtn = document.getElementById('ginv-mic');
 
-        // Abrir/cerrar chat
+        // Toggle chat
         btn.addEventListener('click', () => {
-            chat.style.display = chat.style.display === 'flex' ? 'none' : 'flex';
+            const visible = chat.style.display === 'flex';
+            chat.style.display = visible ? 'none' : 'flex';
+            if (!visible) {
+                input.focus();
+            }
         });
 
-        // Agregar mensaje
+        // Add message
         function addMsg(text, type) {
             const div = document.createElement('div');
             div.className = `msg ${type}`;
@@ -216,120 +351,98 @@ Aquí tienes tu página web **ya completamente actualizada** con la asistente vi
             messages.scrollTop = messages.scrollHeight;
         }
 
-        // Enviar mensaje
+        // Send message
         function enviar() {
             let texto = input.value.trim();
             if (!texto) return;
             addMsg(texto, 'user');
             input.value = '';
 
-            // Respuestas inteligentes relacionadas con la página
+            // Respuestas contextuales
             setTimeout(() => {
-                let resp = "Lo siento, no entendí tu consulta. Puedes preguntarme sobre misión, visión, servicios, cómo reportar un incidente, noticias o contacto.";
-                
+                let resp = "No entendí bien. Prueba con 'ayuda' para opciones. 😊";
                 texto = texto.toLowerCase();
 
                 if (texto.includes('hola') || texto.includes('buenas') || texto.includes('saludos')) {
-                    resp = "¡Hola! 😊 Soy Ginv, tu asistente de Seguridad Integral. ¿En qué puedo ayudarte?";
-                } else if (texto.includes('mision') || texto.includes('visión')) {
-                    resp = "Te llevo a la sección de <a href='#mision-vision' style='color:#0a2342;font-weight:bold;'>Misión y Visión ↓</a>";
-                } else if (texto.includes('servicio')) {
-                    resp = "Aquí tienes todos nuestros <a href='#servicios' style='color:#0a2342;font-weight:bold;'>Servicios de Seguridad ↓</a>";
-                } else if (texto.includes('denuncia') || texto.includes('reportar') || texto.includes('incidente')) {
-                    resp = "Para reportar un incidente o hacer una denuncia anónima, ve a <a href='#contacto' style='color:#0a2342;font-weight:bold;'>Contacto y Denuncias ↓</a><br><br>También puedes usar los canales internos seguros de CANTV.";
-                } else if (texto.includes('noticia') || texto.includes('novedad')) {
-                    resp = "Mira las últimas <a href='#noticias' style='color:#0a2342;font-weight:bold;'>Noticias y Novedades ↓</a>";
-                } else if (texto.includes('contacto') || texto.includes('hablar')) {
-                    resp = "Ve directamente a la sección de <a href='#contacto' style='color:#0a2342;font-weight:bold;'>Contacto ↓</a>";
+                    resp = "¡Hola! Bienvenido a Seguridad Integral de CANTV. ¿Qué necesitas saber?";
                 } else if (texto.includes('ayuda')) {
-                    resp = "Puedes preguntarme sobre:<br>• Misión y visión<br>• Nuestros servicios<br>• Cómo reportar incidentes<br>• Noticias recientes<br>• Contacto";
+                    resp = "Puedo ayudarte con:<br>• <strong>Misión y Visión</strong><br>• <strong>Servicios</strong><br>• <strong>Reportar incidente</strong><br>• <strong>Noticias</strong><br>• <strong>Contacto</strong>";
+                } else if (texto.includes('mision') || texto.includes('vision')) {
+                    resp = "Aquí va la <a href='#mision-vision' style='color:#0a2342;font-weight:bold;'>Misión y Visión ↓</a>";
+                } else if (texto.includes('servicio') || texto.includes('ciberseguridad') || texto.includes('fisica')) {
+                    resp = "Explora nuestros <a href='#servicios' style='color:#0a2342;font-weight:bold;'>Servicios ↓</a><br>Incluye ciberseguridad, física y más.";
+                } else if (texto.includes('denuncia') || texto.includes('reportar') || texto.includes('incidente')) {
+                    resp = "Para denuncias anónimas, ve a <a href='#contacto' style='color:#0a2342;font-weight:bold;'>Contacto ↓</a><br>Usa canales internos seguros de CANTV.";
+                } else if (texto.includes('noticia') || texto.includes('novedad')) {
+                    resp = "Lee las últimas <a href='#noticias' style='color:#0a2342;font-weight:bold;'>Noticias ↓</a>";
+                } else if (texto.includes('contacto')) {
+                    resp = "<a href='#contacto' style='color:#0a2342;font-weight:bold;'>Contacto directo ↓</a><br>¡Estoy aquí para guiarte!";
                 }
 
                 addMsg(resp, 'ginv');
-                hablar(resp.replace(/<[^>]*>/g, '')); // Quitar HTML para voz
+                // Hablar solo texto plano
+                hablar(resp.replace(/<[^>]*>/g, ''));
             }, 800);
         }
 
         sendBtn.addEventListener('click', enviar);
         input.addEventListener('keypress', e => { if (e.key === 'Enter') enviar(); });
 
-        // === VOZ (Web Speech API) ===
+        // Voz: Reconocimiento
         let recognition;
         let grabando = false;
-
         if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
             recognition = new SpeechRecognition();
             recognition.lang = 'es-VE';
             recognition.interimResults = false;
-
             recognition.onresult = (e) => {
-                const transcript = e.results[0][0].transcript;
-                input.value = transcript;
+                input.value = e.results[0][0].transcript;
                 enviar();
             };
-
-            recognition.onerror = () => {
-                micBtn.classList.remove('recording');
-                grabando = false;
-            };
-
-            recognition.onend = () => {
+            recognition.onerror = recognition.onend = () => {
                 micBtn.classList.remove('recording');
                 grabando = false;
             };
         } else {
-            micBtn.style.display = 'none';
+            micBtn.style.display = 'none'; // Ocultar si no soporta
         }
-
         micBtn.addEventListener('click', () => {
             if (!recognition) return;
+            grabando = !grabando;
             if (grabando) {
-                recognition.stop();
-            } else {
                 recognition.start();
                 micBtn.classList.add('recording');
-                grabando = true;
+            } else {
+                recognition.stop();
             }
         });
 
-        // Síntesis de voz (Ginv habla)
+        // Voz: Síntesis (Ginv responde hablando)
         function hablar(texto) {
             if ('speechSynthesis' in window) {
                 const utter = new SpeechSynthesisUtterance(texto);
                 utter.lang = 'es-ES';
-                utter.rate = 0.9;
-                utter.pitch = 1.1;
+                utter.rate = 0.95;
+                utter.pitch = 1.05;
                 const voces = speechSynthesis.getVoices();
-                const vozPreferida = voces.find(v => v.lang.startsWith('es') && (v.name.includes('Google') || v.name.includes('female')));
-                if (vozPreferida) utter.voice = vozPreferida;
+                const vozF = voces.find(v => v.lang.startsWith('es') && (v.name.toLowerCase().includes('female') || v.name.includes('Google')));
+                if (vozF) utter.voice = vozF;
                 speechSynthesis.speak(utter);
             }
         }
 
-        // Scroll suave al hacer clic en enlaces del chat
+        // Scroll suave y cerrar chat
         document.addEventListener('click', e => {
-            if (e.target.tagName === 'A' && e.target.getAttribute('href')?.startsWith('#')) {
+            if (e.target.tagName === 'A' && e.target.href?.startsWith('#')) {
                 e.preventDefault();
-                const section = document.querySelector(e.target.getAttribute('href'));
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                    setTimeout(() => chat.style.display = 'none', 800);
+                const target = document.querySelector(e.target.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => { chat.style.display = 'none'; }, 1000);
                 }
             }
         });
     </script>
 </body>
 </html>
-```
-
-### Lo que ahora tiene tu página:
-- Foto real de **Ginv** como botón flotante (usando enlace directo a la imagen que subiste).
-- Chat moderno, elegante y 100% responsive.
-- Interacción por **voz** (hablarle con el micrófono).
-- Ginv **responde hablando** (síntesis de voz natural femenina).
-- Respuestas inteligentes relacionadas con el contenido de tu página.
-- Navegación suave a las secciones al hacer clic en los enlaces del chat.
-- Totalmente integrado con el diseño corporativo de CANTV.
-
-¡Listo! Solo copia y pega este código completo. Si más adelante quieres conectar a Ginv con una IA más potente (Grok, OpenAI, etc.), solo avísame y lo hacemos en 5 minutos. 🚀
