@@ -15,17 +15,16 @@
         }
         header {
             background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Encabezado.png?raw=true'); /* Nueva imagen de encabezado */
-            background-size: 100% 100%; /* La imagen se estira para encuadrar el header */
+            background-size: cover; /* Ajustado para responsividad: cover en lugar de 100% 100% */
             background-position: center; /* Centra la imagen de fondo */
             background-repeat: no-repeat; /* Evita que la imagen se repita */
             color: #ffffff;
             padding: 0;
             text-align: center;
-            /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */ /* Eliminado el box-shadow */
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 250px; /* Altura mínima ajustada a 250px */
+            min-height: 150px; /* Reducida altura mínima para dispositivos móviles */
             position: relative;
         }
 
@@ -76,11 +75,6 @@
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
-        @media (min-width: 768px) {
-            .mission-vision-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
         .service-card {
             background-color: #f8f9fa;
             border: 1px solid #e0e0e0;
@@ -108,111 +102,51 @@
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
-        .news-carousel {
-            overflow: hidden;
-            position: relative;
-            margin-top: 1rem;
-        }
-        .news-track {
-            display: flex;
-            animation: scroll 30s linear infinite;
-            width: calc(200% + 2rem); /* Duplicar el ancho para loop seamless */
-        }
         .news-item {
             background-color: #f8f9fa;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
-            padding: 1rem;
-            margin-right: 1rem;
-            text-align: left;
-            transition: box-shadow 0.3s ease;
-            flex: 0 0 250px; /* Tamaño más pequeño para cada vista */
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-        }
-        .news-item:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .news-item h3 {
-            color: #1a3a5e;
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
-        .news-item p {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 0.5rem;
-        }
-        .news-item .date {
-            font-size: 0.75rem;
-            color: #888;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .news-item a {
-            font-size: 0.85rem;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .news-item a:hover {
-            text-decoration: underline;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-50% - 1rem)); }
-        }
-        footer {
-            background: linear-gradient(135deg, #0a2342 0%, #1a3a5e 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 0;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
-        }
-        footer img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-        /* Formulario de denuncias */
-        #denuncia-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .form-group {
+            padding: 1.5rem;
             margin-bottom: 1rem;
         }
-        label {
-            display: block;
+        .news-item h3 {
+            text-align: left;
+            color: #1a3a5e;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .news-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .news-item .date {
+            font-size: 0.85rem;
+            color: #888;
             margin-bottom: 0.5rem;
-            font-weight: bold;
+            display: block;
         }
-        input, textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #reporte-numero {
-            margin-top: 1rem;
+        footer {
+            background-color: #0a2342; /* Color de fondo de respaldo si la imagen no carga */
+            color: #ffffff;
             text-align: center;
-            font-weight: bold;
-            color: #007bff;
+            padding: 0; /* Eliminado padding para que la imagen ocupe todo */
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Membrete5.png?raw=true'); /* Membrete5 como fondo del footer */
+            background-size: 100% 100%; /* La imagen se estira para encuadrar el footer */
+            background-position: center; /* Centra la imagen de fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            min-height: 143px; /* Altura mínima ajustada a la altura de la imagen Membrete5.png */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        footer p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            color: inherit; /* Asegura que el color del texto sea el definido en footer */
         }
         /* Mejoras para responsividad */
         @media (max-width: 768px) {
@@ -244,33 +178,31 @@
                 font-size: 0.95rem;
             }
             .news-item h3 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             .news-item p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
-            .news-item {
-                flex: 0 0 200px; /* Más pequeño en móviles */
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
             }
-            .news-track {
-                animation: scroll 20s linear infinite; /* Acelerar para móviles */
+            .services-grid {
+                grid-template-columns: 1fr;
             }
         }
-
         @media (max-width: 480px) {
             nav a {
                 padding: 0.7rem 1rem;
                 font-size: 0.9rem;
                 display: block;
             }
-            .services-grid {
-                grid-template-columns: 1fr;
+            .service-card h3 {
+                font-size: 1.2rem;
             }
-            .news-item {
-                flex: 0 0 180px; /* Aún más pequeño en pantallas muy pequeñas */
+            .service-card p {
+                font-size: 0.9rem;
             }
         }
-
         @media (min-width: 768px) {
             .mission-vision-grid {
                 grid-template-columns: 1fr 1fr;
@@ -280,38 +212,35 @@
 </head>
 <body>
     <header>
-        <img src="https://raw.githubusercontent.com/hriver02/GerenciadeInvestigaciones.html/refs/heads/main/Encabezado.png" alt="Encabezado">
+        <!-- El encabezado ahora es una única imagen de fondo -->
+        <!-- No hay elementos de texto o logos individuales en el HTML del header -->
     </header>
-
     <nav>
         <a href="#inicio">Inicio</a>
         <a href="#mision-vision">Misión y Visión</a>
         <a href="#servicios">Servicios</a>
         <a href="#noticias">Noticias y Novedades</a>
-        <a href="#contacto">Contacto y Denuncias</a>
+        <a href="#contacto">Contacto</a>
     </nav>
-
     <div class="container">
         <section id="inicio">
             <h2>Bienvenido</h2>
-            <p style="text-align: center;">La Gerencia de Investigaciones de CANTV se enfoca en la búsqueda de la verdad y la protección de los intereses de la empresa, a través de la investigación exhaustiva de hechos y situaciones que puedan afectar nuestra integridad y operaciones.</p>
-            <p style="text-align: center;">Utilizamos metodologías avanzadas y un equipo especializado para garantizar procesos justos, transparentes y efectivos.</p>
+            <p style="text-align: center;">En la Gerencia General de Seguridad Integral de CANTV, nos dedicamos a proteger los activos críticos de la empresa, garantizando la continuidad operativa y la confianza de nuestros usuarios. Nuestra estrategia se basa en la prevención, detección y respuesta eficiente ante cualquier amenaza.</p>
+            <p style="text-align: center;">Trabajamos con tecnología de vanguardia y un equipo altamente capacitado para ofrecer un entorno seguro y confiable para todos.</p>
         </section>
-
         <section id="mision-vision">
             <h2>Misión y Visión</h2>
             <div class="mission-vision-grid">
                 <div>
                     <h3>Nuestra Misión</h3>
-                    <p>Realizar investigaciones objetivas y rigurosas sobre incidentes, irregularidades o cualquier situación que comprometa la seguridad, ética o patrimonio de CANTV, proporcionando información veraz y oportuna para la toma de decisiones y la aplicación de medidas correctivas y preventivas.</p>
+                    <p>Garantizar la protección integral de la infraestructura, información, personal y operaciones de CANTV, mediante la implementación de políticas, procedimientos y tecnologías de seguridad avanzadas, asegurando la continuidad del servicio y la confianza de nuestros usuarios y colaboradores.</p>
                 </div>
                 <div>
                     <h3>Nuestra Visión</h3>
-                    <p>Ser un pilar fundamental en la salvaguarda de la integridad de CANTV, reconocidos por nuestra eficiencia, profesionalismo y compromiso con la justicia, contribuyendo a mantener un ambiente de confianza y transparencia en todas las operaciones de la empresa.</p>
+                    <p>Ser el referente de excelencia en seguridad integral dentro del sector de las telecomunicaciones, innovando constantemente en la gestión de riesgos y la protección de activos, para consolidar a CANTV como una empresa líder, resiliente y confiable en Venezuela.</p>
                 </div>
             </div>
         </section>
-
         <section id="servicios">
             <h2>Nuestros Servicios</h2>
             <div class="services-grid">
@@ -341,7 +270,6 @@
                 </div>
             </div>
         </section>
-
         <section id="noticias">
             <h2>Noticias y Novedades</h2>
             <div class="news-item">
@@ -362,153 +290,13 @@
             <!-- Puedes añadir más noticias aquí -->
         </section>
         <section id="contacto">
-            <h2>Contacto y Denuncias</h2>
-            <p style="text-align: center;">Para reportar fraudes o ilícitos dentro de la empresa, utilice el siguiente formulario. Las denuncias pueden ser anónimas.</p>
-            <form id="denuncia-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre (opcional):</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Su nombre (opcional)">
-                </div>
-                <div class="form-group">
-                    <label for="correo">Correo Electrónico (opcional):</label>
-                    <input type="email" id="correo" name="correo" placeholder="Su correo electrónico (opcional)">
-                </div>
-                <div class="form-group">
-                    <label for="tipo">Tipo de Denuncia:</label>
-                    <select id="tipo" name="tipo">
-                        <option value="fraude">Fraude</option>
-                        <option value="ilicito">Ilícito</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Descripción del Incidente:</label>
-                    <textarea id="descripcion" name="descripcion" rows="5" placeholder="Describa el fraude o ilícito observado"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="evidencia">Evidencia Adjunta (opcional):</label>
-                    <input type="file" id="evidencia" name="evidencia">
-                </div>
-                <button type="submit">Enviar Denuncia</button>
-            </form>
-            <p style="text-align: center; margin-top: 1rem;">Para más información o consultas, por favor contáctenos a través de los canales internos de CANTV.</p>
+            <h2>Contacto</h2>
+            <p style="text-align: center;">Para más información o consultas, por favor contáctenos a través de los canales internos de CANTV.</p>
+            <!-- Aquí se podría añadir un formulario de contacto o detalles específicos si se desea -->
         </section>
     </div>
     <footer>
         <p>&copy; 2023 CANTV. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        // Script para manejar el formulario y generar número de reporte correlativo
-        let reportCounter = localStorage.getItem('reportCounter') ? parseInt(localStorage.getItem('reportCounter')) : 0;
-
-        document.getElementById('denuncia-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            reportCounter++;
-            localStorage.setItem('reportCounter', reportCounter);
-            const reportNumber = 'REP-' + reportCounter.toString().padStart(6, '0');
-            alert('Denuncia enviada con éxito. Número de reporte: ' + reportNumber);
-            // Aquí podrías agregar código para enviar el formulario a un servidor si es necesario
-            this.reset(); // Reinicia el formulario
-        });
-    </script>
-<!-- Asistente Virtual - Chatbot Simple -->
-<div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; width: 300px; height: 400px; background: #fff; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: none; flex-direction: column; z-index: 1000;">
-  <!-- Header del Chat -->
-  <div id="chat-header" style="background: #007bff; color: white; padding: 10px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center;">
-    <span>Asistente de Seguridad CANTV</span>
-    <button id="close-chat" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">×</button>
-  </div>
-  
-  <!-- Área de Mensajes -->
-  <div id="chat-messages" style="flex: 1; padding: 10px; overflow-y: auto; background: #f8f9fa;"></div>
-  
-  <!-- Input del Usuario -->
-  <div style="padding: 10px; border-top: 1px solid #ccc; display: flex;">
-    <input type="text" id="user-input" placeholder="Escribe tu mensaje..." style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-right: 5px;" onkeypress="handleKeyPress(event)">
-    <button onclick="sendMessage()" style="padding: 8px 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
-  </div>
-</div>
-
-<!-- Botón Flotante para Abrir Chat -->
-<button id="chat-toggle" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #007bff; color: white; border: none; border-radius: 50%; cursor: pointer; z-index: 999; font-size: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">💬</button>
-
-<script>
-  // Variables del Chatbot
-  const chatContainer = document.getElementById('chatbot-container');
-  const chatToggle = document.getElementById('chat-toggle');
-  const closeChat = document.getElementById('close-chat');
-  const chatMessages = document.getElementById('chat-messages');
-  const userInput = document.getElementById('user-input');
-
-  // Respuestas predefinidas del Bot (personalizables)
-  const botResponses = {
-    'hola': '¡Hola! Soy el asistente virtual de la Gerencia de Investigaciones de CANTV. ¿En qué puedo ayudarte? Escribe "ayuda" para opciones.',
-    'ayuda': 'Opciones: <br>- "servicios": Conoce nuestros servicios de seguridad.<br>- "denuncia": Te guío para enviar una denuncia.<br>- "mision": Lee nuestra misión y visión.<br>- "noticias": Últimas novedades.<br>- "contacto": Información de contacto.',
-    'servicios': 'Ofrecemos: Seguridad Física, Ciberseguridad, Gestión de Riesgos, Continuidad del Negocio, Capacitación y Auditorías. <a href="#servicios" style="color: #007bff;">Ir a Servicios</a>',
-    'denuncia': 'Para denuncias anónimas, usa el formulario abajo. ¿Qué tipo de incidente reportas? (e.g., fraude, ciberataque). <a href="#contacto" style="color: #007bff;">Ir a Contacto</a>',
-    'mision': 'Nuestra misión es realizar investigaciones objetivas para proteger CANTV. <a href="#mision-vision" style="color: #007bff;">Leer más</a>',
-    'noticias': 'Última noticia: CANTV fortalece ciberseguridad (15/11/2023). <a href="#noticias" style="color: #007bff;">Ver Noticias</a>',
-    'contacto': 'Envía tu denuncia por el formulario o contacta internamente. ¡Tu anonimato está protegido!',
-    'default': 'Lo siento, no entiendo eso. Escribe "ayuda" para más opciones. 😊'
-  };
-
-  // Función para agregar mensaje al chat
-  function addMessage(text, isUser = false) {
-    const messageDiv = document.createElement('div');
-    messageDiv.style.marginBottom = '10px';
-    messageDiv.style.padding = '8px';
-    messageDiv.style.borderRadius = '5px';
-    messageDiv.style.background = isUser ? '#007bff' : '#e9ecef';
-    messageDiv.style.color = isUser ? 'white' : 'black';
-    messageDiv.style.textAlign = isUser ? 'right' : 'left';
-    messageDiv.innerHTML = text;
-    chatMessages.appendChild(messageDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  // Función para enviar mensaje
-  function sendMessage() {
-    const message = userInput.value.trim().toLowerCase();
-    if (!message) return;
-    
-    addMessage(message, true);
-    userInput.value = '';
-    
-    // Simular respuesta del bot (con delay para naturalidad)
-    setTimeout(() => {
-      let response = botResponses.default;
-      for (let key in botResponses) {
-        if (message.includes(key)) {
-          response = botResponses[key];
-          break;
-        }
-      }
-      addMessage(response);
-    }, 1000);
-  }
-
-  // Manejar Enter en input
-  function handleKeyPress(event) {
-    if (event.key === 'Enter') {
-      sendMessage();
-    }
-  }
-
-  // Event Listeners
-  chatToggle.onclick = () => {
-    chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
-    if (chatContainer.style.display === 'flex') {
-      addMessage('¡Bienvenido! ¿Cómo puedo asistirte en temas de seguridad e investigaciones?');
-    }
-  };
-  
-  closeChat.onclick = () => {
-    chatContainer.style.display = 'none';
-  };
-
-  // Inicializar chat vacío
-  chatMessages.innerHTML = '';
-</script>
 </body>
 </html>
