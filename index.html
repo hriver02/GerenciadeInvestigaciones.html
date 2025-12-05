@@ -14,23 +14,21 @@
             line-height: 1.6;
         }
         header {
-            background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Encabezado.png?raw=true'); /* Nueva imagen de encabezado */
-            background-size: 100% 100%; /* La imagen se estira para encuadrar el header */
-            background-position: center; /* Centra la imagen de fondo */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Encabezado.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: #ffffff;
             padding: 0;
             text-align: center;
-            /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */ /* Eliminado el box-shadow */
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 250px; /* Altura mínima ajustada a 250px */
+            min-height: 150px;
             position: relative;
         }
-
         nav {
-            background-color: #1a3a5e; /* Azul un poco más claro */
+            background-color: #1a3a5e;
             padding: 0.5rem 0;
             text-align: center;
             position: relative;
@@ -64,7 +62,7 @@
             margin-bottom: 1rem;
         }
         h2 {
-            border-bottom: 2px solid #007bff; /* Azul de acento */
+            border-bottom: 2px solid #007bff;
             padding-bottom: 0.5rem;
             display: inline-block;
             margin-left: auto;
@@ -75,11 +73,6 @@
             grid-template-columns: 1fr;
             gap: 1.5rem;
             margin-top: 1.5rem;
-        }
-        @media (min-width: 768px) {
-            .mission-vision-grid {
-                grid-template-columns: 1fr 1fr;
-            }
         }
         .service-card {
             background-color: #f8f9fa;
@@ -108,160 +101,83 @@
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
-        .news-carousel {
-            overflow: hidden;
-            position: relative;
-            margin-top: 1rem;
-        }
-        .news-track {
-            display: flex;
-            animation: scroll 30s linear infinite;
-            width: calc(200% + 2rem); /* Duplicar el ancho para loop seamless */
-        }
         .news-item {
             background-color: #f8f9fa;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
-            padding: 1rem;
-            margin-right: 1rem;
-            text-align: left;
-            transition: box-shadow 0.3s ease;
-            flex: 0 0 250px; /* Tamaño más pequeño para cada vista */
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-        }
-        .news-item:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
         }
         .news-item h3 {
+            text-align: left;
             color: #1a3a5e;
             margin-top: 0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         .news-item p {
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: #555;
-            margin-bottom: 0.5rem;
         }
         .news-item .date {
-            font-size: 0.75rem;
-            color: #888;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .news-item a {
             font-size: 0.85rem;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .news-item a:hover {
-            text-decoration: underline;
-        }
-        .news-item iframe {
-            width: 100%;
-            height: 150px; /* Altura para reels */
-            border: none;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-50% - 1rem)); }
+            color: #888;
+            margin-bottom: 0.5rem;
+            display: block;
         }
         footer {
-            background: linear-gradient(135deg, #0a2342 0%, #1a3a5e 100%);
+            background-color: #0a2342;
             color: #ffffff;
             text-align: center;
             padding: 0;
-            margin-top: 3rem;
+            margin-top: 2rem;
             font-size: 0.9rem;
-            box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
+            background-image: url('https://github.com/hriver02/GerenciadeInvestigaciones.html/blob/main/Membrete5.png?raw=true');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 143px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
-        footer img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
+        footer p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
         }
-        /* Mejoras para responsividad */
+
+        /* Responsividad */
         @media (max-width: 768px) {
-            header {
-                min-height: auto;
-                padding: 1.5rem 0;
-            }
-            header img {
-                width: 100%;
-            }
-            nav {
-                padding: 0.5rem 0;
-            }
-            nav a {
-                padding: 0.8rem 1.2rem;
-                font-size: 0.95rem;
-            }
-            .container {
-                padding: 0 1.5rem;
-                margin: 2rem auto;
-            }
-            section {
-                padding: 2rem;
-            }
-            .service-card h3 {
-                font-size: 1.3rem;
-            }
-            .service-card p {
-                font-size: 0.95rem;
-            }
-            .news-item h3 {
-                font-size: 1.2rem;
-            }
-            .news-item p {
-                font-size: 0.95rem;
-            }
-            .news-item {
-                flex: 0 0 200px; /* Más pequeño en móviles */
-            }
-            .news-track {
-                animation: scroll 20s linear infinite; /* Acelerar para móviles */
-            }
+            header { min-height: auto; padding: 1.5rem 0; }
+            nav a { padding: 0.8rem 1.2rem; font-size: 0.95rem; }
+            .services-grid, .mission-vision-grid { grid-template-columns: 1fr; }
         }
-
         @media (max-width: 480px) {
-            nav a {
-                padding: 0.7rem 1rem;
-                font-size: 0.9rem;
-                display: block;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .news-item {
-                flex: 0 0 180px; /* Aún más pequeño en pantallas muy pequeñas */
-            }
+            nav a { padding: 0.7rem 1rem; font-size: 0.9rem; display: block; }
         }
-
         @media (min-width: 768px) {
-            .mission-vision-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .mission-vision-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://raw.githubusercontent.com/hriver02/GerenciadeInvestigaciones.html/refs/heads/main/Encabezado.png" alt="Encabezado">
-    </header>
+
+    <header></header>
 
     <nav>
         <a href="#inicio">Inicio</a>
         <a href="#mision-vision">Misión y Visión</a>
         <a href="#servicios">Servicios</a>
         <a href="#noticias">Noticias y Novedades</a>
-        <a href="#contacto">Contacto y Denuncias</a>
+        <a href="#contacto">Contacto</a>
     </nav>
 
     <div class="container">
         <section id="inicio">
             <h2>Bienvenido</h2>
-            <p style="text-align: center;">La Gerencia de Investigaciones de CANTV se enfoca en la búsqueda de la verdad y la protección de los intereses de la empresa, a través de la investigación exhaustiva de hechos y situaciones que puedan afectar nuestra integridad y operaciones.</p>
-            <p style="text-align: center;">Utilizamos metodologías avanzadas y un equipo especializado para garantizar procesos justos, transparentes y efectivos.</p>
+            <p style="text-align: center;">En la Gerencia General de Seguridad Integral de CANTV, nos dedicamos a proteger los activos críticos de la empresa, garantizando la continuidad operativa y la confianza de nuestros usuarios. Nuestra estrategia se basa en la prevención, detección y respuesta eficiente ante cualquier amenaza.</p>
+            <p style="text-align: center;">Trabajamos con tecnología de vanguardia y un equipo altamente capacitado para ofrecer un entorno seguro y confiable para todos.</p>
         </section>
 
         <section id="mision-vision">
@@ -269,11 +185,11 @@
             <div class="mission-vision-grid">
                 <div>
                     <h3>Nuestra Misión</h3>
-                    <p>Realizar investigaciones objetivas y rigurosas sobre incidentes, irregularidades o cualquier situación que comprometa la seguridad, ética o patrimonio de CANTV, proporcionando información veraz y oportuna para la toma de decisiones y la aplicación de medidas correctivas y preventivas.</p>
+                    <p>Garantizar la protección integral de la infraestructura, información, personal y operaciones de CANTV, mediante la implementación de políticas, procedimientos y tecnologías de seguridad avanzadas, asegurando la continuidad del servicio y la confianza de nuestros usuarios y colaboradores.</p>
                 </div>
                 <div>
                     <h3>Nuestra Visión</h3>
-                    <p>Ser un pilar fundamental en la salvaguarda de la integridad de CANTV, reconocidos por nuestra eficiencia, profesionalismo y compromiso con la justicia, contribuyendo a mantener un ambiente de confianza y transparencia en todas las operaciones de la empresa.</p>
+                    <p>Ser el referente de excelencia en seguridad integral dentro del sector de las telecomunicaciones, innovando constantemente en la gestión de riesgos y la protección de activos, para consolidar a CANTV como una empresa líder, resiliente y confiable en Venezuela.</p>
                 </div>
             </div>
         </section>
@@ -281,200 +197,141 @@
         <section id="servicios">
             <h2>Nuestros Servicios</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <h3>Seguridad Física</h3>
-                    <p>Protección de instalaciones, equipos y personal mediante sistemas de vigilancia, control de acceso y protocolos de respuesta ante emergencias.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Ciberseguridad</h3>
-                    <p>Defensa contra amenazas digitales, protección de datos, prevención de intrusiones y gestión de incidentes de seguridad informática.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Gestión de Riesgos</h3>
-                    <p>Identificación, evaluación y mitigación de riesgos operativos y estratégicos que puedan afectar la seguridad y continuidad del negocio.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Continuidad del Negocio</h3>
-                    <p>Desarrollo e implementación de planes para asegurar la operación ininterrumpida de los servicios críticos ante cualquier eventualidad.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Concientización y Capacitación</h3>
-                    <p>Programas de formación para el personal en mejores prácticas de seguridad, promoviendo una cultura de prevención y responsabilidad.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Auditorías de Seguridad</h3>
-                    <p>Evaluación periódica de sistemas y procesos para identificar vulnerabilidades y asegurar el cumplimiento de normativas.</p>
-                </div>
+                <div class="service-card"><h3>Seguridad Física</h3><p>Protección de instalaciones, equipos y personal mediante sistemas de vigilancia, control de acceso y protocolos de respuesta ante emergencias.</p></div>
+                <div class="service-card"><h3>Ciberseguridad</h3><p>Defensa contra amenazas digitales, protección de datos, prevención de intrusiones y gestión de incidentes de seguridad informática.</p></div>
+                <div class="service-card"><h3>Gestión de Riesgos</h3><p>Identificación, evaluación y mitigación de riesgos operativos y estratégicos que puedan afectar la seguridad y continuidad del negocio.</p></div>
+                <div class="service-card"><h3>Continuidad del Negocio</h3><p>Desarrollo e implementación de planes para asegurar la operación ininterrumpida de los servicios críticos ante cualquier eventualidad.</p></div>
+                <div class="service-card"><h3>Concientización y Capacitación</h3><p>Programas de formación para el personal en mejores prácticas de seguridad, promoviendo una cultura de prevención y responsabilidad.</p></div>
+                <div class="service-card"><h3>Auditorías de Seguridad</h3><p>Evaluación periódica de sistemas y procesos para identificar vulnerabilidades y asegurar el cumplimiento de normativas.</p></div>
             </div>
         </section>
 
         <section id="noticias">
             <h2>Noticias y Novedades</h2>
-            <div class="news-carousel">
-                <div class="news-track">
-                    <!-- Contenido duplicado para loop seamless -->
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DQdMFxTDt1R/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">15 de Noviembre de 2023</span>
-                        <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
-                        <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DQrl-oPAmBw/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">01 de Noviembre de 2023</span>
-                        <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
-                        <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DO3lAjijttr/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">20 de Octubre de 2023</span>
-                        <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
-                        <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DPwfcbWiSP-/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">21 de octubre de 2025</span>
-                        <h3>Barcos, aviones y marines: así es el despliegue militar de Estados Unidos frente a Venezuela</h3>
-                        <p>Una fuerza militar estadounidense sin precedentes se ha desplegado en el mar Caribe y frente a la costa de Venezuela, como parte de una ofensiva ...</p>
-                        <a href="https://www.infobae.com/estados-unidos/2025/10/21/barcos-aviones-y-marines-asi-es-el-despliegue-militar-de-estados-unidos-frente-a-venezuela/" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.youtube.com/embed/mZ6OLhhLirg" width="250" height="150" frameborder="0" allowfullscreen></iframe>
-                        <span class="date">17 de octubre de 2025</span>
-                        <h3>Se reaviva tensión entre Venezuela y EEUU</h3>
-                        <p>Se reaviva tensión entre Venezuela y EEUU | Edición Digital 17 de octubre de 2025</p>
-                        <a href="https://www.youtube.com/watch?v=mZ6OLhhLirg" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.youtube.com/embed/eMcNY603cNk" width="250" height="150" frameborder="0" allowfullscreen></iframe>
-                        <span class="date">21 de octubre de 2025</span>
-                        <h3>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz</h3>
-                        <p>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta -a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/</p>
-                        <a href="https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta-a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3734637695248494578" alt="Reajuste de tarifas Digitel octubre 2025">
-                        <span class="date">2025</span>
-                        <h3>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025</h3>
-                        <p>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025. Marcado para el 01/10/2025 Plan Inteligente Plus 6GB/6.24$ ✳️Bs. 782, ...</p>
-                        <a href="https://www.facebook.com/photo.php?fbid=1016190467196346&id=100064162056749&set=a.455089829973082" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://averiastelefonicas.cantv.com.ve/views/Infografia-Aba-2.jpg" alt="Servicio de reporte de avería Cantv">
-                        <span class="date">2025</span>
-                        <h3>Servicio de reporte de avería - Cantv | Averias en línea</h3>
-                        <p>Servicio de reporte de avería. Martes, 21 de octubre de 2025 07:36 pm. CANTV. Reporte de avería de telefonía · Reporte de avería de internet · Reporte de avería ...</p>
-                        <a href="https://averiastelefonicas.cantv.com.ve/views/reporte/infografia" target="_blank">Fuente</a>
-                    </div>
-                    <!-- Duplicar el contenido para loop -->
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DQdMFxTDt1R/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">15 de Noviembre de 2023</span>
-                        <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
-                        <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DQrl-oPAmBw/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">01 de Noviembre de 2023</span>
-                        <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
-                        <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DO3lAjijttr/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">20 de Octubre de 2023</span>
-                        <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
-                        <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.instagram.com/reel/DPwfcbWiSP-/embed" width="250" height="150" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <span class="date">21 de octubre de 2025</span>
-                        <h3>Barcos, aviones y marines: así es el despliegue militar de Estados Unidos frente a Venezuela</h3>
-                        <p>Una fuerza militar estadounidense sin precedentes se ha desplegado en el mar Caribe y frente a la costa de Venezuela, como parte de una ofensiva ...</p>
-                        <a href="https://www.infobae.com/estados-unidos/2025/10/21/barcos-aviones-y-marines-asi-es-el-despliegue-militar-de-estados-unidos-frente-a-venezuela/" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.youtube.com/embed/mZ6OLhhLirg" width="250" height="150" frameborder="0" allowfullscreen></iframe>
-                        <span class="date">17 de octubre de 2025</span>
-                        <h3>Se reaviva tensión entre Venezuela y EEUU</h3>
-                        <p>Se reaviva tensión entre Venezuela y EEUU | Edición Digital 17 de octubre de 2025</p>
-                        <a href="https://www.youtube.com/watch?v=mZ6OLhhLirg" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <iframe src="https://www.youtube.com/embed/eMcNY603cNk" width="250" height="150" frameborder="0" allowfullscreen></iframe>
-                        <span class="date">21 de octubre de 2025</span>
-                        <h3>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz</h3>
-                        <p>Aba Ultra de Cantv conecta a más de 2.000 familias en Las Delicias de Puerto La Cruz https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta -a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/</p>
-                        <a href="https://www.laiguana.tv/articulos/1421873-aba-ultra-de-cantv-conecta-a-mas-de-2-000-familias-en-las-delicias-de-puerto-la-cruz/" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3734637695248494578" alt="Reajuste de tarifas Digitel octubre 2025">
-                        <span class="date">2025</span>
-                        <h3>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025</h3>
-                        <p>Digitel | Realiza reajuste de sus tarifas aumento mes de Octubre 2025. Marcado para el 01/10/2025 Plan Inteligente Plus 6GB/6.24$ ✳️Bs. 782, ...</p>
-                        <a href="https://www.facebook.com/photo.php?fbid=1016190467196346&id=100064162056749&set=a.455089829973082" target="_blank">Fuente</a>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://averiastelefonicas.cantv.com.ve/views/Infografia-Aba-2.jpg" alt="Servicio de reporte de avería Cantv">
-                        <span class="date">2025</span>
-                        <h3>Servicio de reporte de avería - Cantv | Averias en línea</h3>
-                        <p>Servicio de reporte de avería. Martes, 21 de octubre de 2025 07:36 pm. CANTV. Reporte de avería de telefonía · Reporte de avería de internet · Reporte de avería ...</p>
-                        <a href="https://averiastelefonicas.cantv.com.ve/views/reporte/infografia" target="_blank">Fuente</a>
-                    </div>
-                </div>
+            <div class="news-item">
+                <span class="date">15 de Noviembre de 2023</span>
+                <h3>CANTV Fortalece su Ciberseguridad con Nuevas Herramientas</h3>
+                <p>La Gerencia General de Seguridad Integral ha implementado soluciones de última generación para la detección y prevención de amenazas cibernéticas, reforzando la protección de la infraestructura crítica de la empresa.</p>
             </div>
-            <!-- Puedes añadir más noticias aquí -->
+            <div class="news-item">
+                <span class="date">01 de Noviembre de 2023</span>
+                <h3>Programa de Capacitación en Seguridad Física para el Personal</h3>
+                <p>Se ha iniciado un nuevo ciclo de talleres y capacitaciones para todo el personal de CANTV, enfocado en las mejores prácticas de seguridad física y protocolos de emergencia en las instalaciones.</p>
+            </div>
+            <div class="news-item">
+                <span class="date">20 de Octubre de 2023</span>
+                <h3>Campaña de Concientización sobre Phishing y Fraudes Digitales</h3>
+                <p>Lanzamiento de una campaña interna para educar a los empleados sobre los riesgos del phishing y otras formas de fraude digital, promoviendo un entorno de trabajo más seguro.</p>
+            </div>
         </section>
 
         <section id="contacto">
-            <h2>Contacto y Denuncias</h2>
-            <p style="text-align: center;">Para reportar fraudes o ilícitos dentro de la empresa, utilice el siguiente formulario. Las denuncias pueden ser anónimas.</p>
-            <form id="denuncia-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre (opcional):</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Su nombre (opcional)">
-                </div>
-                <div class="form-group">
-                    <label for="correo">Correo Electrónico (opcional):</label>
-                    <input type="email" id="correo" name="correo" placeholder="Su correo electrónico (opcional)">
-                </div>
-                <div class="form-group">
-                    <label for="tipo">Tipo de Denuncia:</label>
-                    <select id="tipo" name="tipo">
-                        <option value="fraude">Fraude</option>
-                        <option value="ilicito">Ilícito</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Descripción del Incidente:</label>
-                    <textarea id="descripcion" name="descripcion" rows="5" placeholder="Describa el fraude o ilícito observado"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="evidencia">Evidencia Adjunta (opcional):</label>
-                    <input type="file" id="evidencia" name="evidencia">
-                </div>
-                <button type="submit">Enviar Denuncia</button>
-            </form>
-            <p style="text-align: center; margin-top: 1rem;">Para más información o consultas, por favor contáctenos a través de los canales internos de CANTV.</p>
+            <h2>Contacto</h2>
+            <p style="text-align: center;">Para reportar incidentes de seguridad, denuncias anónimas o consultas, utiliza los canales internos de CANTV o escríbenos directamente a través del asistente virtual.</p>
         </section>
     </div>
+
     <footer>
-        <p>&copy; 2023 CANTV. Todos los derechos reservados.</p>
+        <p>© 2023 CANTV. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        // Script para manejar el formulario y generar número de reporte correlativo
-        let reportCounter = localStorage.getItem('reportCounter') ? parseInt(localStorage.getItem('reportCounter')) : 0;
+    <!-- ==================================== -->
+    <!-- ASISTENTE VIRTUAL FLOTANTE           -->
+    <!-- ==================================== -->
+    <div id="chatbot-container" style="position:fixed;bottom:20px;right:20px;width:320px;max-width:90vw;height:480px;background:#fff;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,0.15);display:none;flex-direction:column;z-index:9999;font-family:inherit;">
+        <div id="chat-header" style="background:#0a2342;color:white;padding:12px 15px;border-radius:12px 12px 0 0;display:flex;justify-content:space-between;align-items:center;font-weight:bold;">
+            <span>Asistente de Seguridad CANTV</span>
+            <button id="close-chat" style="background:none;border:none;color:white;font-size:24px;cursor:pointer;">×</button>
+        </div>
+        <div id="chat-messages" style="flex:1;padding:15px;overflow-y:auto;background:#f8f9fa;"></div>
+        <div style="padding:10px;border-top:1px solid #ddd;display:flex;background:white;border-radius:0 0 12px 12px;">
+            <input type="text" id="user-input" placeholder="Escribe tu consulta..." autocomplete="off" style="flex:1;padding:10px;border:1px solid #ccc;border-radius:8px;margin-right:8px;font-size:14px;">
+            <button onclick="sendMessage()" style="padding:10px 16px;background:#0a2342;color:white;border:none;border-radius:8px;cursor:pointer;font-weight:bold;">Enviar</button>
+        </div>
+    </div>
 
-        document.getElementById('denuncia-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            reportCounter++;
-            localStorage.setItem('reportCounter', reportCounter);
-            const reportNumber = 'REP-' + reportCounter.toString().padStart(6, '0');
-            alert('Denuncia enviada con éxito. Número de reporte: ' + reportNumber);
-            // Aquí podrías agregar código para enviar el formulario a un servidor si es necesario
-            this.reset(); // Reinicia el formulario
+    <button id="chat-toggle" style="position:fixed;bottom:20px;right:20px;width:62px;height:62px;background:#0a2342;color:white;border:none;border-radius:50%;cursor:pointer;z-index:9998;font-size:28px;box-shadow:0 4px 15px rgba(0,0,0,0.2);transition:transform 0.2s;">Asistente</button>
+
+    <script>
+        const chatContainer = document.getElementById('chatbot-container');
+        const chatToggle = document.getElementById('chat-toggle');
+        const closeChat = document.getElementById('close-chat');
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+
+        const responses = {
+            'hola': '¡Hola! Soy el asistente virtual de la Gerencia de Seguridad Integral de CANTV. ¿En qué puedo ayudarte hoy?',
+            'ayuda': 'Puedes preguntarme sobre:<br>• <strong>Misión y visión</strong><br>• <strong>Servicios</strong> de seguridad<br>• <strong>Cómo hacer una denuncia</strong><br>• <strong>Noticias</strong> recientes<br>• <strong>Contacto</strong>',
+            'mision|visión': 'Te llevo a la sección de <a href="#mision-vision" style="color:#0a2342;font-weight:bold;">Misión y Visión ↓</a>',
+            'servicios': 'Conoce todos nuestros servicios aquí: <a href="#servicios" style="color:#0a2342;font-weight:bold;">Nuestros Servicios ↓</a>',
+            'denuncia|reportar|incidente': 'Para reportar un incidente de seguridad o hacer una denuncia anónima, ve directamente a: <a href="#contacto" style="color:#0a2342;font-weight:bold;">Contacto y Denuncias ↓</a><br><br>También puedes usar los canales internos seguros de CANTV.',
+            'noticias|novedades': 'Aquí tienes las últimas noticias: <a href="#noticias" style="color:#0a2342;font-weight:bold;">Noticias y Novedades ↓</a>',
+            'contacto|canal': 'Para consultas o reportes, utiliza los canales internos o ve a: <a href="#contacto" style="color:#0a2342;font-weight:bold;">Sección Contacto ↓</a>',
+            'default': 'No entendí tu consulta. Escribe <strong>ayuda</strong> para ver las opciones disponibles 😊'
+        };
+
+        function addMessage(text, isUser = false) {
+            const msg = document.createElement('div');
+            msg.style.marginBottom = '12px';
+            msg.style.padding = '10px 14px';
+            msg.style.borderRadius = '18px';
+            msg.style.maxWidth = '85%';
+            msg.style.wordWrap = 'break-word';
+            if (isUser) {
+                msg.style.background = '#0a2342';
+                msg.style.color = 'white';
+                msg.style.alignSelf = 'flex-end';
+                msg.style.marginLeft = 'auto';
+            } else {
+                msg.style.background = '#e9ecef';
+                msg.style.color = '#333';
+                msg.style.alignSelf = 'flex-start';
+            }
+            msg.innerHTML = text;
+            chatMessages.appendChild(msg);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function sendMessage() {
+            const msg = userInput.value.trim().toLowerCase();
+            if (!msg) return;
+            addMessage(msg, true);
+            userInput.value = '';
+
+            setTimeout(() => {
+                let reply = responses.default;
+                for (let key in responses) {
+                    if (key.split('|').some(k => msg.includes(k))) {
+                        reply = responses[key];
+                        break;
+                    }
+                }
+                addMessage(reply);
+            }, 800);
+        }
+
+        userInput.addEventListener('keypress', e => { if (e.key === 'Enter') sendMessage(); });
+
+        chatToggle.onclick = () => {
+            const isVisible = chatContainer.style.display === 'flex';
+            chatContainer.style.display = isVisible ? 'none' : 'flex';
+            if (!isVisible) {
+                setTimeout(() => addMessage('¡Hola! ¿En qué puedo ayudarte con temas de seguridad integral?'), 500);
+            }
+        };
+
+        closeChat.onclick = () => chatContainer.style.display = 'none';
+
+        // Enlaces suaves al hacer clic desde el chat
+        document.addEventListener('click', e => {
+            if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                document.querySelector(e.target.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => chatContainer.style.display = 'none', 800);
+            }
         });
     </script>
+    <!-- FIN ASISTENTE VIRTUAL -->
+
 </body>
 </html>
